@@ -76,21 +76,13 @@ namespace WindowsPreviewImages
             string second = now.Second < 10 ? "0" + now.Second.ToString() : now.Second.ToString();
 
             string sDefault = string.Format("D:\\preview\\{0}-{1}-{2}-{3}-{4}-{5}", now.Year, month, day, hour, minute, second);
-            if (args.Length == 0)
+            if (args.Length < 2)
             {
                 return string.Format(sDefault);
             }
             else
             {
-                DirectoryInfo directoryInfo = new DirectoryInfo(args[0]);
-                if (directoryInfo.Exists)
-                {
-                    return string.Format(args[1]);
-                }
-                else
-                {
-                    return string.Format(sDefault);
-                }
+                return string.Format(args[1]);
             }
         }
 
