@@ -85,7 +85,7 @@ namespace WindowsPreviewImages
                 DirectoryInfo directoryInfo = new DirectoryInfo(args[0]);
                 if (directoryInfo.Exists)
                 {
-                    return string.Format(args[0]);
+                    return string.Format(args[1]);
                 }
                 else
                 {
